@@ -9,21 +9,22 @@
 `http://download.bt.cn/install/update/LinuxPanel-7.7.0.zip`
 
 ### 自用的宝塔面板一键优化补丁
-(原文地址: http://blog.cccyun.cc/?post=431)
-这个是自用的宝塔面板一键优化补丁，主要有以下优化项目：
-1.去除宝塔面板强制绑定账号
-2.去除各种删除操作时的计算题与延时等待
-3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）
-4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板
-5.关闭活动推荐与在线客服
-6.去除自动校验文件与上报信息定时任务
-7.去除面板日志与网站绑定域名上报
 
-适用宝塔面板版本7.7:
+(原文地址: http://blog.cccyun.cc/?post=431)  
+这个是自用的宝塔面板一键优化补丁，主要有以下优化项目：  
+1.去除宝塔面板强制绑定账号  
+2.去除各种删除操作时的计算题与延时等待  
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）  
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板  
+5.关闭活动推荐与在线客服  
+6.去除自动校验文件与上报信息定时任务  
+7.去除面板日志与网站绑定域名上报  
+
+适用宝塔面板版本7.7:  
 `wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/optimize.sh && bash optimize.sh`
 全部使用补丁的方式，而不是替换文件的方式，方便后续升级版本的修改。
 
-适用宝塔面板7.9版本的命令（7.9版本不支持去除强制绑定账号，新增去除面板首页广告）：
+适用宝塔面板7.9版本的命令（7.9版本不支持去除强制绑定账号，新增去除面板首页广告）：  
 `wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/7.9/optimize_new.sh && bash optimize.sh`
 
 ### 宝塔7.7.0 跳过手机绑定:
