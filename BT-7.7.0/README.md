@@ -9,7 +9,7 @@
 `http://download.bt.cn/install/update/LinuxPanel-7.7.0.zip`
 
 ### 宝塔面板一键优化补丁
-####适用宝塔面板版本7.7:
+#### 适用宝塔面板版本7.7:
 `wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/optimize.sh && bash optimize.sh`
 
 #### 适用宝塔面板7.9版本的命令（7.9版本不支持去除强制绑定账号，新增去除面板首页广告）：
@@ -22,11 +22,14 @@
 `sed -i "s/self.CheckInstalled()/True/g" /www/server/panel/class/system.py`
 
 ### 安装关联自己证书：
-`rm -rf /www/server/panel/ssl/certificate.pem && \`
-`rm -rf /www/server/panel/ssl/privateKey.pem`
-
-`ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.crt /www/server/panel/ssl/certificate.pem && \`
-`ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.key /www/server/panel/ssl/privateKey.pem`
+```
+rm -rf /www/server/panel/ssl/certificate.pem && \
+rm -rf /www/server/panel/ssl/privateKey.pem
+```
+```
+ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.crt /www/server/panel/ssl/certificate.pem && \
+ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.key /www/server/panel/ssl/privateKey.pem
+```
 
 ### 宝塔7.7.0解锁收费插件变无限期：
 找到：
