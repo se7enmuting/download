@@ -21,7 +21,7 @@
 7.去除面板日志与网站绑定域名上报  
 
 适用宝塔面板版本7.7:  
-`wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/optimize.sh && bash optimize.sh`
+`wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/optimize.sh && bash optimize.sh`  
 全部使用补丁的方式，而不是替换文件的方式，方便后续升级版本的修改。
 
 适用宝塔面板7.9版本的命令（7.9版本不支持去除强制绑定账号，新增去除面板首页广告）：  
