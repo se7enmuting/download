@@ -27,10 +27,10 @@
 适用宝塔面板7.9版本的命令（7.9版本不支持去除强制绑定账号，新增去除面板首页广告）：  
 `wget -O optimize.sh https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/7.9/optimize_new.sh && bash optimize.sh`
 
-### 宝塔7.7.0 跳过手机绑定:
+### 宝塔7.7.0 跳过手机账号绑定:（上面补丁通过其他方式已经实现：1. ）
 `rm -rf /www/server/panel/data/bind.pl`
 
-### 宝塔7.7.0 禁用套件推荐安装弹窗:
+### 宝塔7.7.0 禁用套件推荐安装弹窗:（上面补丁已经额外集成）
 `sed -i "s/self.CheckInstalled()/True/g" /www/server/panel/class/system.py`
 
 ### 安装关联自己证书（abc.com 改成自己域名）：
