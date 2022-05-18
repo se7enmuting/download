@@ -17,13 +17,13 @@ if [ ! -f /www/server/panel/data/userInfo.json ]; then
 fi
 echo "已去除宝塔面板强制绑定账号."
 
-Layout_file="/www/server/panel/BTPanel/templates/default/layout.html";
-JS_file="/www/server/panel/BTPanel/static/bt.js";
-if [ `grep -c "<script src=\"/static/bt.js\"></script>" $Layout_file` -eq '0' ];then
-	sed -i '/{% block scripts %} {% endblock %}/a <script src="/static/bt.js"></script>' $Layout_file;
-fi;
-wget -q https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/bt.js -O $JS_file;
-echo "已去除各种计算题与延时等待."
+# Layout_file="/www/server/panel/BTPanel/templates/default/layout.html";
+# JS_file="/www/server/panel/BTPanel/static/bt.js";
+# if [ `grep -c "<script src=\"/static/bt.js\"></script>" $Layout_file` -eq '0' ];then
+	# sed -i '/{% block scripts %} {% endblock %}/a <script src="/static/bt.js"></script>' $Layout_file;
+# fi;
+# wget -q https://raw.githubusercontent.com/Se7enMuting/download/master/BT-7.7.0/bt.js -O $JS_file;
+# echo "已去除各种计算题与延时等待."
 
 sed -i "/htaccess = self.sitePath+'\/.htaccess'/, /public.ExecShell('chown -R www:www ' + htaccess)/d" /www/server/panel/class/panelSite.py
 sed -i "/index = self.sitePath+'\/index.html'/, /public.ExecShell('chown -R www:www ' + index)/d" /www/server/panel/class/panelSite.py
@@ -54,6 +54,9 @@ if [ ! -f /www/server/panel/data/not_workorder.pl ]; then
 	echo "True" > /www/server/panel/data/not_workorder.pl
 fi
 echo "已关闭活动推荐与在线客服."
+
+sed -i "s/self.CheckInstalled()/True/g" /www/server/panel/class/system.py
+echo "禁用套件推荐安装弹窗."
 
 /etc/init.d/bt restart
 
