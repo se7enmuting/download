@@ -13,7 +13,7 @@
 (原文地址: http://blog.cccyun.cc/?post=431)  
 这个是自用的宝塔面板一键优化补丁，主要有以下优化项目：  
 1.去除宝塔面板强制绑定账号  
-2.去除各种删除操作时的计算题与延时等待  
+~~2.去除各种删除操作时的计算题与延时等待~~  
 3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）  
 4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板  
 5.关闭活动推荐与在线客服  
@@ -33,14 +33,14 @@
 ### 宝塔7.7.0 禁用套件推荐安装弹窗:
 `sed -i "s/self.CheckInstalled()/True/g" /www/server/panel/class/system.py`
 
-### 安装关联自己证书：
+### 安装关联自己证书（abc.com 改成自己域名）：
 ```
 rm -rf /www/server/panel/ssl/certificate.pem && \
 rm -rf /www/server/panel/ssl/privateKey.pem
 ```
 ```
-ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.crt /www/server/panel/ssl/certificate.pem && \
-ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.key /www/server/panel/ssl/privateKey.pem
+ln -s /etc/v2ray-agent/tls/abc.com.crt /www/server/panel/ssl/certificate.pem && \
+ln -s /etc/v2ray-agent/tls/abc.com.key /www/server/panel/ssl/privateKey.pem
 ```
 
 ### 宝塔7.7.0解锁收费插件变无限期：
@@ -51,3 +51,9 @@ ln -s /etc/v2ray-agent/tls/or-jp-m1.zi5.win.key /www/server/panel/ssl/privateKey
 全部替换为
 `"endtime": 999999999999`
 保存，重启面板
+
+
+
+### 问题：软件中心的列表找不到了，弹窗提示错误
+
+ `/www/server/panel/data/plugin.json` 文件丢失，手动将备份文件导入即可
