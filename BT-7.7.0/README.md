@@ -51,8 +51,9 @@ ln -s /etc/v2ray-agent/tls/abc.com.key /www/server/panel/ssl/privateKey.pem
 全部替换为
 `"endtime": 999999999999`
 保存，重启面板
-
-
+```
+sed -i 's/"endtime": -1/"endtime": 999999999999/g' /www/server/panel/data/plugin.json
+```
 
 ### 问题：软件中心的列表找不到了，弹窗提示错误
 
