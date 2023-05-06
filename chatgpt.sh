@@ -131,7 +131,7 @@ async def echo_handler(message: Message) -> None:
             history: list[dict] = [json.loads(line) for line in f.readlines()]
 
         completion = openai.ChatCompletion.create(
-            model="OPENAI_MODEL",
+            model=OPENAI_MODEL,
             messages=[*history, query],
             user=str(message.from_user.id),
         )
@@ -166,7 +166,7 @@ sed -i "10 s/tgtoken/'$token'/" /root/TGchatgpt.py
 readp "输入Openai的apikey：" key
 sed -i "11 s/apikey/'$key'/" /root/TGchatgpt.py
 readp "输入Openai的model(gpt-3.5-turbo 或 gpt-4)：" model
-sed -i "12 s/apimodel/$model/" /root/TGchatgpt.py
+sed -i "12 s/apimodel/'$model'/" /root/TGchatgpt.py
 
 cat << EOF >/lib/systemd/system/Chatgpt.service
 [Unit]
@@ -238,7 +238,7 @@ systemctl restart Chatgpt.service
 elif [ $choose == "3" ]; then
 apimodel=`cat /root/TGchatgpt.py | sed -n 12p | awk '{print $3}'`
 readp "输入Openai的model(gpt-3.5-turbo 或 gpt-4)：" model
-sed -i "s/$apimodel/$model/" /root/TGchatgpt.py
+sed -i "s/$apimodel/'$model'/" /root/TGchatgpt.py
 systemctl stop Chatgpt.service
 systemctl restart Chatgpt.service
 else 
