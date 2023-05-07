@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  chatgpt-tg-bot:
+    image: chatgpt-tg-bot:latest
+    container_name: ChatGPTx0*_bot
+    environment:
+      TELEGRAM_TOKEN: '*******************************************'
+      OPENAI_TOKEN: '*********************************************'
+      OPENAI_MODEL: 'gpt-3.5-turbo'
+    build: .
+    restart: always
+    network_mode: bridge
