@@ -1,0 +1,5 @@
+chore: skip auto bypassing port when there is port-range
+https://github.com/vernesong/OpenClash/commit/f7fb9aee4772c2c85114cc8aae82b4f262554e3d
+
+v0.45.121-beta
+2023-06-23 - 9ee0f02ed7615a62f960c9ee2f951dd1b47e2411
