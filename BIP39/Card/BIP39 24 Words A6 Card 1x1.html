@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @media print {
+            @page {
+                size: A6 landscape;
+                margin: 5mm;
+            }
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+            table {
+                font-size: 10px; /* 调整以适应A6尺寸 */
+            }
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .table-container {
+            display: flex;
+            flex-direction: column; /* 改变Flexbox的方向 */
+            justify-content: center;
+            align-items: left;
+            width: 100%;
+            height: 100%;
+        }
+        table {
+            width: 95%; /* 或根据需要调整宽度以铺满网页 */
+            height: 79%;
+            border-collapse: collapse;
+            margin: auto; /* 使表格居中 */
+            table-layout: fixed;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 4px;
+            text-align: center;
+            font-size: 15px; /* 调整字体大小以提高可读性 */
+            overflow: hidden; /* 防止内容溢出 */
+        }
+        .no-column {
+            width: 20px;
+        }
+        .passphrase {
+            text-align: left;
+            width: 90%;
+            margin: 0 auto;
+            margin-left: 2.5%;
+            margin-top: -10px; /* 增加上方的外部间距 */
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="table-container">
+    <h3 style="text-align:left; font-weight:bold; margin-left: 2.8%; margin-bottom: -10px; margin-top: 8px;">BIP39</h3>
+    <table>
+        <tr>
+            <th class="no-column">No.</th>
+            <th>Mnemonic</th>
+            <th class="no-column">No.</th>
+            <th>Mnemonic</th>
+            <th class="no-column">No.</th>
+            <th>Mnemonic</th>
+            <th class="no-column">No.</th>
+            <th>Mnemonic</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+            <td>4</td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td></td>
+          <td>6</td>
+          <td></td>
+          <td>7</td>
+          <td></td>
+          <td>8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td></td>
+          <td>10</td>
+          <td></td>
+          <td>11</td>
+          <td></td>
+          <td>12</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td></td>
+          <td>14</td>
+          <td></td>
+          <td>15</td>
+          <td></td>
+          <td>16</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td></td>
+          <td>18</td>
+          <td></td>
+          <td>19</td>
+          <td></td>
+          <td>20</td>
+          <td></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td></td>
+            <td>22</td>
+            <td></td>
+            <td>23</td>
+            <td></td>
+            <td>24</td>
+            <td></td>
+        </tr>
+    </table>
+    <p class="passphrase">Passphrase (optional): </p>
+  </div>
+</body>
+
+</html>
