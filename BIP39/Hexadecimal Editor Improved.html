@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hexadecimal Editor Improved</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #hexInput {
+            width: 90%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .highlight1, .highlight2, .highlight3, .highlight4, .highlight5, .difference {
+            transition: background-color 0.3s; /* Smooth transition for color change */
+        }
+        .highlight1 {
+            background-color: yellow;
+        }
+        .highlight2 {
+            background-color: lightgreen;
+        }
+        .highlight3 {
+            background-color: lightblue;
+        }
+        .highlight4 {
+            background-color: lightcoral;
+        }
+        .highlight5 {
+            background-color: lightgrey;
+        }
+        .difference {
+            background-color: orange; /* Color for differences */
+        }
+        button {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .button1, .reset1 {
+            background-color: yellow;
+        }
+        .button2, .reset2 {
+            background-color: lightgreen;
+        }
+        .button3, .reset3 {
+            background-color: lightblue;
+        }
+        .button4, .reset4 {
+            background-color: lightcoral;
+        }
+        .button5, .reset5 {
+            background-color: lightgrey;
+        }
+    </style>
+    <script>
+        let originalHex = '';
+        let modifiedHex = '';
+        let highlights = {};
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const positionInputs = document.querySelectorAll('input[type="number"]');
+            positionInputs.forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const highlightClass = this.getAttribute('data-highlight');
+                        clearPreviousHighlight(this, highlightClass);
+                        setHighlight(this.id, highlightClass);
+                    }
+                });
+            });
+        });
+
+        function calculateBits() {
+            originalHex = document.getElementById('hexInput').value;
+            modifiedHex = originalHex;
+            const binaryLength = originalHex.length * 4;
+            document.getElementById('totalBits').innerText = "Total Bits: " + binaryLength;
+            updateDisplay();
+            highlightDifferences();
+        }
+
+        function updateDisplay() {
+            let displayText = '';
+            for (let i = 0; i < modifiedHex.length; i++) {
+                const highlightClass = highlights[i] || '';
+                displayText += `<span class="${highlightClass}">${modifiedHex.charAt(i)}</span>`;
+            }
+            document.getElementById('hexDisplay').innerHTML = displayText;
+            document.getElementById('hexDisplayOriginal').innerText = originalHex;
+            highlightDifferences(); // Call the function to highlight differences
+        }
+
+        function clearPreviousHighlight(inputElement, highlightClass) {
+            for (const key in highlights) {
+                if (highlights[key] === highlightClass) {
+                    delete highlights[key];
+                }
+            }
+            if (document.activeElement !== inputElement) {
+                inputElement.value = '';
+            }
+        }
+
+        function setHighlight(positionInputId, highlightClass) {
+            const position = document.getElementById(positionInputId).value - 1;
+            if (position >= 0 && position < originalHex.length) {
+                highlights[position] = highlightClass;
+            }
+            updateDisplay();
+        }
+
+        function replaceDigit(positionInputId, replacementInputId, highlightClass) {
+            const position = document.getElementById(positionInputId).value - 1;
+            const replacement = document.getElementById(replacementInputId).value;
+
+            if (position >= 0 && position < originalHex.length && /^[0-9a-fA-F]$/.test(replacement)) {
+                modifiedHex = modifiedHex.substring(0, position) + replacement + modifiedHex.substring(position + 1);
+                highlights[position] = highlightClass;
+                updateDisplay();
+            }
+        }
+
+        function resetInput(positionInputId, replacementInputId) {
+            const position = document.getElementById(positionInputId).value - 1;
+            document.getElementById(positionInputId).value = '';
+            document.getElementById(replacementInputId).value = '';
+            if (position >= 0 && position < originalHex.length) {
+                modifiedHex = modifiedHex.substring(0, position) + originalHex.charAt(position) + modifiedHex.substring(position + 1);
+                delete highlights[position];
+                updateDisplay();
+            }
+        }
+
+        function highlightDifferences() {
+            const originalDisplay = document.getElementById('hexDisplayOriginal');
+            let displayText = '';
+            for (let i = 0; i < originalHex.length; i++) {
+                const originalChar = originalHex.charAt(i);
+                const modifiedChar = modifiedHex.charAt(i);
+                if (originalChar !== modifiedChar) {
+                    displayText += `<span class="difference">${originalChar}</span>`;
+                } else {
+                    displayText += originalChar;
+                }
+            }
+            originalDisplay.innerHTML = displayText;
+        }
+    </script>
+</head>
+<body>
+    <h2>Hexadecimal Editor Improved</h2>
+    <input type="text" id="hexInput" oninput="calculateBits()" placeholder="Enter Hexadecimal Number">
+    <p id="totalBits">Total Bits: 0</p>
+    <p id="hexDisplayOriginal"></p>
+    <p id="hexDisplay"></p>
+    <div>
+        <input type="number" id="positionInput1" data-highlight="highlight1" placeholder="Position">
+        <input type="text" id="replacementInput1" maxlength="1" placeholder="Replacement Hex Digit">
+        <button onclick="replaceDigit('positionInput1', 'replacementInput1', 'highlight1')" class="button1">Replace Digit</button>
+        <button onclick="resetInput('positionInput1', 'replacementInput1')" class="reset1">Reset</button>
+    </div>
+    <div>
+        <input type="number" id="positionInput2" data-highlight="highlight2" placeholder="Position">
+        <input type="text" id="replacementInput2" maxlength="1" placeholder="Replacement Hex Digit">
+        <button onclick="replaceDigit('positionInput2', 'replacementInput2', 'highlight2')" class="button2">Replace Digit</button>
+        <button onclick="resetInput('positionInput2', 'replacementInput2', 'highlight2')" class="button2">Reset</button>
+    </div>
+    <div>
+        <input type="number" id="positionInput3" data-highlight="highlight3" placeholder="Position">
+        <input type="text" id="replacementInput3" maxlength="1" placeholder="Replacement Hex Digit">
+        <button onclick="replaceDigit('positionInput3', 'replacementInput3', 'highlight3')" class="button3">Replace Digit</button>
+        <button onclick="resetInput('positionInput3', 'replacementInput3', 'highlight3')" class="button3">Reset</button>
+    </div>
+    <div>
+        <input type="number" id="positionInput4" data-highlight="highlight4" placeholder="Position">
+        <input type="text" id="replacementInput4" maxlength="1" placeholder="Replacement Hex Digit">
+        <button onclick="replaceDigit('positionInput4', 'replacementInput4', 'highlight4')" class="button4">Replace Digit</button>
+        <button onclick="resetInput('positionInput4', 'replacementInput4', 'highlight4')" class="button4">Reset</button>
+    </div>
+    <div>
+        <input type="number" id="positionInput5" data-highlight="highlight5" placeholder="Position">
+        <input type="text" id="replacementInput5" maxlength="1" placeholder="Replacement Hex Digit">
+        <button onclick="replaceDigit('positionInput5', 'replacementInput5', 'highlight5')" class="button5">Replace Digit</button>
+        <button onclick="resetInput('positionInput5', 'replacementInput5', 'highlight5')" class="button5">Reset</button>
+    </div>
+</body>
+</html>
