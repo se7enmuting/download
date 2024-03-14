@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>粘贴图片示例</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #container {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #pasteArea {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            display: block;
+        }
+        #pastedImage {
+            max-width: 800px;
+            max-height: 450px;
+            border: 1px solid black;
+            display: none;
+        }
+        #pastedImage[src]:not([src=""]) {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>在此区域内按 Ctrl+V 粘贴图片</h2>
+        <div id="pasteArea" contenteditable="true"></div>
+        <h2>粘贴的图片：</h2>
+        <img id="pastedImage" src="" alt=""/>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
