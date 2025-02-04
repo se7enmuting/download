@@ -1,0 +1,240 @@
+#EXTM3U
+
+#EXTINF:-1 group-title="上海地方台" tvg-log="",新闻综合HD
+http://192.168.1.172:4022/udp/238.200.200.130:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",东方卫视HD
+http://192.168.1.172:4022/udp/238.200.200.125:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",都市频道HD
+http://192.168.1.172:4022/udp/238.200.200.127:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",纪实人文HD
+http://192.168.1.172:4022/udp/238.200.200.129:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",东方影视HD
+http://192.168.1.172:4022/udp/238.200.200.128:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",第一财经HD
+http://192.168.1.172:4022/udp/238.200.200.132:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",五星体育HD
+http://192.168.1.172:4022/udp/238.200.200.131:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",ICS外语频道HD
+http://192.168.1.172:4022/udp/238.200.200.21:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",上海教育HD
+http://192.168.1.172:4022/udp/238.200.200.187:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",法治天地HD
+http://192.168.1.172:4022/udp/238.200.200.99:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",游戏风云HD
+http://192.168.1.172:4022/udp/238.200.200.29:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",金色学堂HD
+http://192.168.1.172:4022/udp/238.200.200.10:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",生活时尚HD
+http://192.168.1.172:4022/udp/238.200.200.31:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",动漫秀场HD
+http://192.168.1.172:4022/udp/238.200.200.33:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",乐游HD
+http://192.168.1.172:4022/udp/238.200.200.32:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",都市剧场HD
+http://192.168.1.172:4022/udp/238.200.200.34:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",七彩戏剧HD
+http://192.168.1.172:4022/udp/238.200.200.30:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",东方财经HD
+http://192.168.1.172:4022/udp/238.200.200.36:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",哈哈炫动HD
+http://192.168.1.172:4022/udp/238.200.200.176:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",快乐垂钓HD
+http://192.168.1.172:4022/udp/238.200.200.247:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",茶频道HD
+http://192.168.1.172:4022/udp/238.200.200.248:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",导视HD
+http://192.168.1.172:4022/udp/238.200.200.78:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",财富天下
+http://192.168.1.172:4022/udp/238.200.200.230:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",家庭理财
+http://192.168.1.172:4022/udp/238.200.200.188:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",东方购物-1HD
+http://192.168.1.172:4022/udp/238.200.200.79:5540
+#EXTINF:-1 group-title="上海地方台" tvg-log="",东方购物-2HD
+http://192.168.1.172:4022/udp/238.200.200.7:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-1HD
+http://192.168.1.172:4022/udp/238.200.200.133:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-1HD备
+http://192.168.1.172:4022/udp/238.200.200.217:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-2HD
+http://192.168.1.172:4022/udp/238.200.200.231:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-3HD
+http://192.168.1.172:4022/udp/238.200.200.63:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-4HD
+http://192.168.1.172:4022/udp/238.200.200.232:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-5HD
+http://192.168.1.172:4022/udp/238.200.200.64:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-5+HD
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000507/index.m3u8
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-6HD
+http://192.168.1.172:4022/udp/238.200.200.65:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-7HD
+http://192.168.1.172:4022/udp/238.200.200.237:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-8HD
+http://192.168.1.172:4022/udp/238.200.200.66:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-9HD
+http://192.168.1.172:4022/udp/238.200.200.238:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-10HD
+http://192.168.1.172:4022/udp/238.200.200.239:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-11HD
+http://192.168.1.172:4022/udp/238.200.200.57:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-12HD
+http://192.168.1.172:4022/udp/238.200.200.240:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-13HD
+http://192.168.1.172:4022/udp/238.200.200.58:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-14HD
+http://192.168.1.172:4022/udp/238.200.200.241:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-15HD
+http://192.168.1.172:4022/udp/238.200.200.59:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-16HD
+http://[2409:8087:74d9:21::6]:80/270000001128/9900000016/index.m3u8
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-17HD
+http://192.168.1.172:4022/udp/238.200.200.242:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-4K
+http://192.168.1.172:4022/udp/238.200.200.91:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-风云足球HD
+http://192.168.1.172:4022/udp/238.200.200.67:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-央视台球HD
+http://192.168.1.172:4022/udp/238.200.200.68:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-兵器科技HD
+http://192.168.1.172:4022/udp/238.200.200.69:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-世纪地理HD
+http://192.168.1.172:4022/udp/238.200.200.73:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-女性时尚HD
+http://192.168.1.172:4022/udp/238.200.200.74:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-高尔夫网球HD
+http://192.168.1.172:4022/udp/238.200.200.76:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-怀旧剧场HD
+http://192.168.1.172:4022/udp/238.200.200.77:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-风云剧场HD
+http://192.168.1.172:4022/udp/238.200.200.80:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-第一剧场HD
+http://192.168.1.172:4022/udp/238.200.200.81:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-风云音乐HD
+http://192.168.1.172:4022/udp/238.200.200.82:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",CCTV-央视文化精品HD
+http://192.168.1.172:4022/udp/238.200.200.83:5540
+#EXTINF:-1 group-title="央视频道" tvg-log="",央广购物HD
+http://192.168.1.172:4022/udp/238.200.200.249:5540
+#EXTINF:-1 group-title="其他" tvg-log="",优购物HD
+http://192.168.1.172:4022/udp/238.200.200.28:5540
+#EXTINF:-1 group-title="其他" tvg-log="",CGTN
+http://192.168.1.172:4022/udp/238.200.200.118:5540
+#EXTINF:-1 group-title="其他" tvg-log="",中国天气HD
+http://192.168.1.172:4022/udp/238.200.200.251:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",北京卫视HD
+http://192.168.1.172:4022/udp/238.200.200.137:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",江苏卫视HD
+http://192.168.1.172:4022/udp/238.200.200.135:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",浙江卫视HD
+http://192.168.1.172:4022/udp/238.200.200.134:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",湖南卫视HD
+http://192.168.1.172:4022/udp/238.200.200.136:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",安徽卫视HD
+http://192.168.1.172:4022/udp/238.200.200.38:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",山东卫视HD
+http://192.168.1.172:4022/udp/238.200.200.141:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",黑龙江卫视HD
+http://192.168.1.172:4022/udp/238.200.200.140:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",天津卫视HD
+http://192.168.1.172:4022/udp/238.200.200.39:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",江西卫视HD
+http://192.168.1.172:4022/udp/238.200.200.40:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",辽宁卫视HD
+http://192.168.1.172:4022/udp/238.200.200.41:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",湖北卫视HD
+http://192.168.1.172:4022/udp/238.200.200.142:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",广东卫视HD
+http://192.168.1.172:4022/udp/238.200.200.138:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",深圳卫视HD
+http://192.168.1.172:4022/udp/238.200.200.139:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",东南卫视HD
+http://192.168.1.172:4022/udp/238.200.200.42:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",四川卫视HD
+http://192.168.1.172:4022/udp/238.200.200.44:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",重庆卫视HD
+http://192.168.1.172:4022/udp/238.200.200.45:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",河北卫视HD
+http://192.168.1.172:4022/udp/238.200.200.225:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",河南卫视HD
+http://192.168.1.172:4022/udp/238.200.200.233:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",甘肃卫视HD
+http://192.168.1.172:4022/udp/238.200.200.181:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",青海卫视HD
+http://192.168.1.172:4022/udp/238.200.200.25:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",云南卫视HD
+http://192.168.1.172:4022/udp/238.200.200.234:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",广西卫视HD
+http://192.168.1.172:4022/udp/238.200.200.235:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",贵州卫视HD
+http://192.168.1.172:4022/udp/238.200.200.86:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",吉林卫视HD
+http://192.168.1.172:4022/udp/238.200.200.236:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",海南卫视HD
+http://192.168.1.172:4022/udp/238.200.200.85:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",三沙卫视HD
+http://192.168.1.172:4022/udp/238.200.200.95:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",山西卫视
+http://192.168.1.172:4022/udp/238.200.200.161:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",陕西卫视
+http://192.168.1.172:4022/udp/238.200.200.164:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",内蒙古卫视
+http://192.168.1.172:4022/udp/238.200.200.168:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",宁夏卫视
+http://192.168.1.172:4022/udp/238.200.200.151:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",新疆卫视
+http://192.168.1.172:4022/udp/238.200.200.172:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",西藏卫视
+http://192.168.1.172:4022/udp/238.200.200.163:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",兵团卫视
+http://192.168.1.172:4022/udp/238.200.200.173:5540
+#EXTINF:-1 group-title="各地卫视" tvg-log="",延边卫视
+http://192.168.1.172:4022/udp/238.200.200.75:5540
+#EXTINF:-1 group-title="其他" tvg-log="",中国教育-1HD
+http://192.168.1.172:4022/udp/238.200.200.43:5540
+#EXTINF:-1 group-title="其他" tvg-log="",中国教育-2
+http://192.168.1.172:4022/udp/238.200.200.227:5540
+#EXTINF:-1 group-title="其他" tvg-log="",中国教育-4HD
+http://192.168.1.172:4022/udp/238.200.200.70:5540
+#EXTINF:-1 group-title="其他" tvg-log="",中国教育-早教HD
+http://192.168.1.172:4022/udp/238.200.200.84:5540
+#EXTINF:-1 group-title="其他" tvg-log="",CHC家庭影院HD
+http://192.168.1.172:4022/udp/238.200.200.60:5540
+#EXTINF:-1 group-title="其他" tvg-log="",CHC动作电影HD
+http://192.168.1.172:4022/udp/238.200.200.61:5540
+#EXTINF:-1 group-title="其他" tvg-log="",CHC影迷电影HD
+http://192.168.1.172:4022/udp/238.200.200.62:5540
+#EXTINF:-1 group-title="其他" tvg-log="",金鹰纪实HD
+http://192.168.1.172:4022/udp/238.200.200.226:5540
+#EXTINF:-1 group-title="其他" tvg-log="",金鹰卡通HD
+http://192.168.1.172:4022/udp/238.200.200.26:5540
+#EXTINF:-1 group-title="其他" tvg-log="",卡酷少儿HD
+http://192.168.1.172:4022/udp/238.200.200.218:5540
+#EXTINF:-1 group-title="其他" tvg-log="",嘉佳卡通
+http://192.168.1.172:4022/udp/238.200.200.245:5540
+#EXTINF:-1 group-title="其他" tvg-log="",欢笑剧场HD
+http://192.168.1.172:4022/udp/238.200.200.35:5540
+#EXTINF:-1 group-title="其他" tvg-log="",欢笑剧场4K
+http://192.168.1.172:4022/udp/238.200.200.228:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-1HD
+http://192.168.1.172:4022/udp/238.200.200.143:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-2HD
+http://192.168.1.172:4022/udp/238.200.200.144:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-3HD
+http://192.168.1.172:4022/udp/238.200.200.145:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-4HD
+http://192.168.1.172:4022/udp/238.200.200.146:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-5HD
+http://192.168.1.172:4022/udp/238.200.200.147:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-6HD
+http://192.168.1.172:4022/udp/238.200.200.148:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-7HD
+http://192.168.1.172:4022/udp/238.200.200.149:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-8HD
+http://192.168.1.172:4022/udp/238.200.200.214:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-9HD
+http://192.168.1.172:4022/udp/238.200.200.215:5540
+#EXTINF:-1 group-title="其他" tvg-log="",BesTV-10HD
+http://192.168.1.172:4022/udp/238.200.200.216:5540
+
+

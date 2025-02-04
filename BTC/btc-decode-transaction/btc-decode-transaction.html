@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTC Transaction Decoder</title>
+  <style>
+    :root {
+      --primary-color: #4a90e2;
+      --secondary-color: #2c3e50;
+      --background: #f5f7fa;
+      --text-color: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: var(--background);
+      color: var(--text-color);
+    }
+
+    h1 {
+      color: var(--secondary-color);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .input-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      margin: 1rem 0;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--primary-color), #357abd);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.1s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    }
+
+    #output {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 0.9em;
+      margin-top: 1rem;
+      max-height: 60vh;
+      overflow-y: auto;
+      line-height: 1.4;
+      tab-size: 2;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .section-title {
+      color: var(--secondary-color);
+      font-size: 1.2em;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .copy-button {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>BTC Transaction Decoder</h1>
+  
+  <div class="input-section">
+    <p>Enter the raw transaction Hex string here:</p>
+    <textarea id="txHex" rows="5" placeholder="Paste transaction Hex..."></textarea>
+    <button class="full-width" onclick="decodeTransaction()">Decode Transaction</button>
+  </div>
+
+  <div class="section-header">
+    <div class="section-title">Decoded Result</div>
+    <button class="copy-button" onclick="copyDecodedResult()">Copy</button>
+  </div>
+  <pre id="output"></pre>
+
+  <script src="bitcoinjs-lib-4.0.2.js"></script>
+  <script>
+    function decodeTransaction() {
+      document.getElementById("output").textContent = "";
+      
+      const txHex = document.getElementById("txHex").value.trim();
+      
+      if (!txHex) {
+        alert("Please enter transaction Hex!");
+        return;
+      }
+
+      if (!/^[0-9a-fA-F]+$/.test(txHex)) {
+        alert("Invalid Hex format!");
+        return;
+      }
+
+      try {
+        const tx = bitcoin.Transaction.fromHex(txHex);
+        const txid = tx.getId();
+        const hash = txid;
+
+        const ins = tx.ins.map((input, i) => {
+          const inputTxid = Buffer.from(input.hash).reverse().toString('hex');
+          let asm = "";
+          try {
+            asm = bitcoin.script.toASM(input.script);
+          } catch(e) {
+            asm = "";
+          }
+          
+          const witness = input.witness?.length > 0 
+            ? input.witness.map(w => w.toString('hex')) 
+            : [];
+
+          return {
+            n: input.index,
+            script: {
+              asm: asm,
+              hex: input.script.toString('hex')
+            },
+            sequence: input.sequence,
+            txid: inputTxid,
+            witness: witness
+          };
+        });
+
+        const outs = tx.outs.map((output, i) => {
+          let addresses = [];
+          try {
+            const addr = bitcoin.address.fromOutputScript(
+              output.script,
+              bitcoin.networks.bitcoin
+            );
+            addresses.push(addr);
+          } catch(e) {
+            console.warn("Address parse failed:", e.message);
+          }
+          
+          let asm = "";
+          try {
+            asm = bitcoin.script.toASM(output.script);
+          } catch(e) {
+            asm = "";
+          }
+
+          return {
+            n: i,
+            value: output.value,
+            script: {
+              addresses: addresses,
+              asm: asm,
+              hex: output.script.toString('hex')
+            }
+          };
+        });
+
+        const result = {
+          version: tx.version,
+          locktime: tx.locktime,
+          ins: ins,
+          outs: outs,
+          hash: hash,
+          txid: txid
+        };
+
+        document.getElementById("output").textContent = JSON.stringify(result, null, 2);
+      } catch (error) {
+        console.error("Decoding Error:", error);
+        document.getElementById("output").textContent = `Decode failed: ${error.name} - ${error.message}`;
+      }
+    }
+
+    function copyDecodedResult() {
+      const output = document.getElementById("output");
+      const text = output.textContent;
+      
+      if (!text) {
+        alert("No content to copy!");
+        return;
+      }
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-button');
+        btn.textContent = "Copied!";
+        setTimeout(() => {
+          btn.textContent = "Copy";
+        }, 1500);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert("Copy failed. Please manually select and copy the text.");
+      });
+    }
+  </script>
+</body>
+</html>

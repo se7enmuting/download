@@ -114,6 +114,9 @@ http://192.168.1.172:4022/udp/239.45.0.2:5140
 #EXTINF:-1 tvg-id="5" tvg-name="CCTV5" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png" group-title="中央电视",CCTV5体育
 http://192.168.1.172:4022/udp/239.45.1.69:5140
 
+#EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5+.png" group-title="中央电视",CCTV5+体育
+http://192.168.1.172:4022/udp/239.45.0.34:5140
+
 #EXTINF:-1 tvg-id="7" tvg-name="CCTV6" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV6.png" group-title="中央电视",CCTV6电影
 http://192.168.1.172:4022/udp/239.45.1.70:5140
 
@@ -149,6 +152,12 @@ http://192.168.1.172:4022/udp/239.45.0.12:5140
 
 #EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png" group-title="中央电视",CCTV17农村农业
 http://192.168.1.172:4022/udp/239.45.3.52:5140
+
+#EXTINF:-1 group-title="中央电视",CCTV4K超高清1
+http://192.168.1.172:4022/udp/239.45.0.55:5140
+
+#EXTINF:-1 group-title="中央电视",CCTV4K超高清2
+http://192.168.1.172:4022/udp/239.45.1.21:5140
 
 #EXTINF:-1 tvg-id="20" tvg-name="CGTN" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png" group-title="中央电视",CGTN
 http://192.168.1.172:4022/udp/239.45.1.194:5140
@@ -324,3 +333,5 @@ http://192.168.1.172:4022/udp/239.45.3.79:5140
 #EXTINF:-1 group-title="购物频道",家有购物
 http://192.168.1.172:4022/udp/239.45.1.43:5140
 
+#EXTINF:-1 group-title="4K",4K测试
+http://192.168.1.172:4022/udp/239.45.1.108:5140
