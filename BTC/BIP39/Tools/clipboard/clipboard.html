@@ -1,7 +1,8 @@
+<!-- Version: v0.0.1 | GitHub: @Se7enMuting -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>粘贴图片示例</title>
+    <title>Paste Image Example</title>
     <style>
         body, html {
             height: 100%;
@@ -33,13 +34,21 @@
         #pastedImage[src]:not([src=""]) {
             display: block;
         }
+        #version {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <div id="version">v0.0.1</div>
     <div id="container">
-        <h2>在此区域内按 Ctrl+V 粘贴图片</h2>
+        <h2>Press Ctrl+V to Paste Image in This Area</h2>
         <div id="pasteArea" contenteditable="true"></div>
-        <h2>粘贴的图片：</h2>
+        <h2>Pasted Image:</h2>
         <img id="pastedImage" src="" alt=""/>
     </div>
     <script src="script.js"></script>

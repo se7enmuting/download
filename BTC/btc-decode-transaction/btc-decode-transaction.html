@@ -1,3 +1,4 @@
+<!-- Version: v0.0.1 | GitHub: @Se7enMuting -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,9 +110,25 @@
     .full-width {
       width: 100%;
     }
+    
+    .version {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      color: var(--secondary-color);
+      font-size: 0.85em;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 4px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      backdrop-filter: blur(2px);
+    }
   </style>
 </head>
 <body>
+  <div id="version">v0.0.1</div>
+  
   <h1>BTC Transaction Decoder</h1>
   
   <div class="input-section">

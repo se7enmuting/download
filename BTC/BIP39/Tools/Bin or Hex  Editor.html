@@ -1,10 +1,10 @@
+<!-- Version: v0.0.1 | GitHub: @Se7enMuting -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Bin/Hex Editor</title>
     <style>
-        /* 样式保持不变 */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
@@ -77,12 +77,19 @@
         .line-break {
             display: block;
         }
+        .version {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #666;
+        }
     </style>
     <script>
         let originalHex = '';
         let modifiedHex = '';
         let highlights = {};
-        let inputType = 'binary'; // 默认改为binary
+        let inputType = 'binary';
 
         document.addEventListener("DOMContentLoaded", function() {
             const positionInputs = document.querySelectorAll('input[type="number"]');
@@ -166,7 +173,6 @@
             const position = document.getElementById(positionInputId).value - 1;
             const replacement = document.getElementById(replacementInputId).value;
             
-            // 根据当前输入类型验证输入
             let regex;
             if (inputType === 'binary') {
                 regex = /^[01]$/;
@@ -209,9 +215,9 @@
     </script>
 </head>
 <body>
+    <div class="version">v0.0.1</div>
     <h2>Bin/Hex Editor</h2>
     <div>
-        <!-- 交换radio按钮顺序并设置默认选择 -->
         <input type="radio" id="binaryType" name="inputType" value="binary" checked>
         <label for="binaryType">Bin</label>
         <input type="radio" id="hexType" name="inputType" value="hex">
@@ -235,7 +241,6 @@
             </td>
         </tr>
     </table>
-    <!-- 以下按钮部分保持不变 -->
     <div>
         <input type="number" id="positionInput1" data-highlight="highlight1" placeholder="Position">
         <input type="text" id="replacementInput1" maxlength="1" placeholder="New Value">
