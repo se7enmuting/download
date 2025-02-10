@@ -1,0 +1,4 @@
+# 运行过程log查看
+docker compose logs builder
+# 编译后需手动删除容器
+docker compose down --remove-orphans
