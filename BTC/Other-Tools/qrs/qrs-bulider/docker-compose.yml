@@ -5,9 +5,12 @@ services:
     working_dir: /app
     volumes:
       - ./output:/output
+    tty: true
+    stdin_open: true
     command: >
       sh -c "
-       (node -v && \
+       (export CI=true && \
+        node -v && \
         apk add --no-cache git bash zip && \
         git clone https://github.com/qifi-dev/qrs.git . && \
         npm install -g npm@latest && \
@@ -21,5 +24,5 @@ services:
         cd .output/public && \
         tar -czvf /output/qrs.tar.gz . && \
         zip -r /output/qrs.zip .;
-        exit"
+        exec tail -f /dev/null"
     restart: "no"
