@@ -1,4 +1,6 @@
-# 运行过程log查看
+# log查看
 docker compose logs builder
+# 进入容器
+docker exec -it node-builder /bin/sh
 # 编译后需手动删除容器
 docker compose down --remove-orphans
